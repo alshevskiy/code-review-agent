@@ -202,17 +202,17 @@ def GetUser(userId):
 
 ## Поддерживаемые языки
 
-| Язык | Расширения | Особенности |
-|------|-----------|-------------|
-| Python | `.py` | Type hints, async/await, PEP 8 |
-| JavaScript | `.js`, `.jsx` | const/let, async/await, ES modules |
-| TypeScript | `.ts`, `.tsx` | Строгая типизация, generics |
-| Go | `.go` | Error handling, goroutines |
-| Java | `.java` | Optional, Stream API, @DisplayName |
-| Kotlin | `.kt` | Coroutines, null-safety |
-| Rust | `.rs` | Ownership, Result/Option |
-| C# | `.cs` | Nullable, async/await, LINQ |
-| PHP | `.php` | Type declarations, PSR-12 |
+| Язык       | Расширения       | Особенности                            |
+|------------|------------------|----------------------------------------|
+| Python     | `.py`            | Type hints, async/await, PEP 8         |
+| JavaScript | `.js`, `.jsx`    | const/let, async/await, ES modules     |
+| TypeScript | `.ts`, `.tsx`    | Строгая типизация, generics            |
+| Go         | `.go`            | Error handling, goroutines             |
+| Java       | `.java`          | Optional, Stream API, @DisplayName     |
+| Kotlin     | `.kt`            | Coroutines, null-safety                |
+| Rust       | `.rs`            | Ownership, Result/Option               |
+| C#         | `.cs`            | Nullable, async/await, LINQ            |
+| PHP        | `.php`           | Type declarations, PSR-12              |
 
 ## Структура проекта
 
@@ -222,7 +222,6 @@ code-review-agent/
 ├── setup.bat                         # скрипт установки (Windows)
 ├── pyproject.toml                    # зависимости и сборка
 ├── README.md
-│
 ├── src/
 │   └── code_review_agent/
 │       ├── __init__.py
@@ -231,12 +230,10 @@ code-review-agent/
 │       ├── git_utils.py              # получение diff из git
 │       ├── reviewer.py               # логика LLM-ревью
 │       ├── formatter.py              # форматирование вывода
-│       │
 │       └── languages/
 │           ├── __init__.py
 │           ├── prompts.py            # промпты для каждого языка
 │           └── detector.py           # авто-определение языка
-│
 └── tests/
 ```
 
