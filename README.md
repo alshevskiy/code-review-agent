@@ -216,7 +216,7 @@ def GetUser(userId):
 
 ## Структура проекта
 
-```
+```text
 code-review-agent/
 ├── setup.sh                          # скрипт установки (Linux/macOS)
 ├── setup.bat                         # скрипт установки (Windows)
