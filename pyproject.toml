@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "code-review-agent"
+version = "1.0.0"
+description = "AI-агент для ревью кода на основе LLM"
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.11"
+dependencies = [
+    "openai>=1.30",
+    "typer>=0.12",
+    "rich>=13.0",
+    "gitpython>=3.1",
+    "pyyaml>=6.0",
+]
+
+[project.scripts]
+code-review-agent = "code_review_agent.cli:app"
+
+[tool.setuptools.packages.find]
+where = ["src"]
