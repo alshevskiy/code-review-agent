@@ -218,22 +218,25 @@ def GetUser(userId):
 
 ```
 code-review-agent/
-├── setup.sh              # скрипт установки (Linux/macOS)
-├── setup.bat             # скрипт установки (Windows)
-├── pyproject.toml
+├── setup.sh                          # скрипт установки (Linux/macOS)
+├── setup.bat                         # скрипт установки (Windows)
+├── pyproject.toml                    # зависимости и сборка
 ├── README.md
+│
 ├── src/
 │   └── code_review_agent/
 │       ├── __init__.py
-│       ├── cli.py        # CLI точка входа
-│       ├── git_utils.py  # Получение diff
-│       ├── reviewer.py   # LLM-ревью
-│       ├── formatter.py  # Форматирование вывода
-│       ├── config.py     # Конфигурация
+│       ├── cli.py                    # CLI точка входа
+│       ├── config.py                 # конфигурация провайдера
+│       ├── git_utils.py              # получение diff из git
+│       ├── reviewer.py               # логика LLM-ревью
+│       ├── formatter.py              # форматирование вывода
+│       │
 │       └── languages/
 │           ├── __init__.py
-│           ├── prompts.py   # Промпты
-│           └── detector.py  # Определение языка
+│           ├── prompts.py            # промпты для каждого языка
+│           └── detector.py           # авто-определение языка
+│
 └── tests/
 ```
 
